@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26f0f72e-2fe8-4183-835a-504cc9de198b" name="Default Changelist" comment="">
+    <list default="true" id="26f0f72e-2fe8-4183-835a-504cc9de198b" name="Default Changelist" comment="honkit">
+      <change afterPath="$PROJECT_DIR$/.npmignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/avatar-default.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716968034806</updated>
       <workItem from="1716968040325" duration="10505000" />
-      <workItem from="1717036993006" duration="2343000" />
+      <workItem from="1717036993006" duration="16630000" />
     </task>
     <task id="LOCAL-00001" summary="disqus plugin init">
       <created>1717037380267</created>
@@ -64,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717037380268</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix">
+      <created>1717040460543</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717040460543</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,6 +81,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="disqus plugin init" />
-    <option name="LAST_COMMIT_MESSAGE" value="disqus plugin init" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

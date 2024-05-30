@@ -1,0 +1,50 @@
+# 忽略测试相关文件和目录
+tests/
+test/
+.spec.js
+.test.js
+coverage/
+
+# 忽略开发环境下的配置和脚本
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.gitignore
+.gitattributes
+.travis.yml
+.jenkins*
+.*.swp
+.DS_Store
+
+# 忽略编译输出和临时文件
+dist/
+build/
+out/
+target/
+tmp/
+*.log
+
+# 忽略编辑器和IDE的配置文件及缓存
+.vscode/
+.idea/
+*.suo
+*.user
+*.iml
+.project
+*.classpath
+*.cproject
+*.settings/
+
+# 忽略文档源文件和非必需的文档输出
+docs-src/
+docs/_build/
+
+# 忽略特定的包管理配置或锁定文件
+yarn.lock
+package-lock.json
+
+# 忽略本地和全局安装的依赖
+node_modules/
+
+# 如果有需要包含在包内的node_modules子目录，请显式列出除外规则
+!node_modules
