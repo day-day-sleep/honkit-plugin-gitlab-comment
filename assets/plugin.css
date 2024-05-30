@@ -104,3 +104,22 @@
 .gitbook-link {
     display: none !important;
 }
+
+.viewAllWrapper {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.viewAllBtn {
+    width: 88px;
+    height: 32px;
+    background: lightgray;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'FontAwesome';
+    cursor: pointer;
+}
