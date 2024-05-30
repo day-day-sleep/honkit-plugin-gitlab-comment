@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26f0f72e-2fe8-4183-835a-504cc9de198b" name="Default Changelist" comment="" />
+    <list default="true" id="26f0f72e-2fe8-4183-835a-504cc9de198b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,11 +55,23 @@
       <option name="presentableId" value="Default" />
       <updated>1716968034806</updated>
       <workItem from="1716968040325" duration="10505000" />
-      <workItem from="1717036993006" duration="74000" />
+      <workItem from="1717036993006" duration="2343000" />
     </task>
+    <task id="LOCAL-00001" summary="disqus plugin init">
+      <created>1717037380267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717037380268</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="disqus plugin init" />
+    <option name="LAST_COMMIT_MESSAGE" value="disqus plugin init" />
   </component>
 </project>

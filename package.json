@@ -1,6 +1,6 @@
 {
   "name": "honkit-plugin-gitlab-disqus",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "use gitlab issues for honkit disqus component",
   "main": "index.js",
   "author": "day-day-sleep",

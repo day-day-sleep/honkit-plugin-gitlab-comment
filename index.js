@@ -11,7 +11,7 @@ module.exports = {
     hooks: {
         'finish': function (page) {
             config = this.config.get("pluginsConfig.label-disqus")
-
+            console.log('config', config)
             if(config === undefined) return page
 
             const disqusContent = `<div class="plugin-label-disqus-container">

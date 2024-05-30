@@ -2,8 +2,9 @@ const axios = require('axios');
 import moment from 'moment';
 
 require(["gitbook"], function(gitbook) {
-    let pluginsConfig = {};
-    const cfg = pluginsConfig.gitlabDisqus;
+    console.log('this.config', this.config)
+    var pluginsConfig = {};
+    var cfg = pluginsConfig.gitlabDisqus;
     var commentObj = {}
     Object.defineProperty(commentObj, 'inputValue', {
         configurable: true,
@@ -25,6 +26,7 @@ require(["gitbook"], function(gitbook) {
 
     }
     gitbook.events.bind("start", function(e, config) {
+        console.log('gitbook start config', config)
         pluginsConfig = config;
         initDisqus();
     });
