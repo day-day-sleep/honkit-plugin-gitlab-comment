@@ -1,0 +1,41 @@
+# 忽略编译后的文件
+dist/
+build/
+out/
+target/
+
+# 忽略IDE和编辑器配置文件
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+*.swp
+*.bak
+*.log
+
+# 忽略操作系统生成的文件
+.DS*
+._*
+Thumbs.db
+.DS_Store
+.DS_Store
+
+# 忽略包管理配置文件
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# 忽略测试相关的临时文件
+coverage/
+.nycache/
+.junit.xml
+
+# 忽略日志文件
+logs/
+
+# 其他可能需要忽略的
+.env
+*.env
+*.lock

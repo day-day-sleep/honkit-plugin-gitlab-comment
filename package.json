@@ -1,5 +1,5 @@
 {
-  "name": "honkit-plugin-gitlab-disqus-test",
+  "name": "honkit-plugin-gitlab-disqus",
   "version": "0.1.7",
   "description": "use gitlab issues for honkit disqus component",
   "main": "index.js",
