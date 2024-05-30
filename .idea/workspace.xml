@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26f0f72e-2fe8-4183-835a-504cc9de198b" name="Default Changelist" comment="fix">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="26f0f72e-2fe8-4183-835a-504cc9de198b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716968034806</updated>
       <workItem from="1716968040325" duration="10505000" />
-      <workItem from="1717036993006" duration="17170000" />
+      <workItem from="1717036993006" duration="17432000" />
     </task>
     <task id="LOCAL-00001" summary="disqus plugin init">
       <created>1717037380267</created>
@@ -76,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717062380200</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix">
+      <created>1717062906680</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717062906680</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,8 +89,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="disqus plugin init" />
-    <MESSAGE value="fix" />
     <MESSAGE value="feat honkit gitlab plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat honkit gitlab plugin" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

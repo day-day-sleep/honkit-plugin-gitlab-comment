@@ -1,7 +1,7 @@
 require(["gitbook"], function (gitbook) {
 
     gitbook.events.bind("start", function(_e, config) {
-        window.disqusConfig = config['gitlab-disqus-test'];
+        window.disqusConfig = config['gitlab-disqus'];
     });
 
     gitbook.events.bind("page.change", async function(_e, config) {
