@@ -5,6 +5,7 @@ module.exports = {
             'plugin.css'
         ],
         js: [
+            'marked.min.js',
             'plugin.js'
         ]
     }

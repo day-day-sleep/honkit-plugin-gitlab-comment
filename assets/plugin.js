@@ -5,6 +5,8 @@ require(["gitbook"], function (gitbook) {
     });
 
     gitbook.events.bind("page.change", async function(_e, config) {
+        let page = gitbook.state;
+        console.log('page----', page)
         window.disqusViewAll = false;
         initDisqus();
         await fetchCommentList();
@@ -115,7 +117,7 @@ require(["gitbook"], function (gitbook) {
                     <div class="plugin-gitlab-disqus-commentContent">
                         <div class="plugin-gitlab-disqus-userName">nickname</div>
                         <div class="plugin-gitlab-disqus-createDate">${formatDate(comment.created_at)}</div>
-                        <div class="plugin-gitlab-disqus-commentText">${comment.body}</div>
+                        <div class="plugin-gitlab-disqus-commentText">${marked.parse(comment.body)}</div>
                     </div>
                 </div>`
                     }).join('');
@@ -133,7 +135,7 @@ require(["gitbook"], function (gitbook) {
                     <div class="plugin-gitlab-disqus-commentContent">
                         <div class="plugin-gitlab-disqus-userName">nickname</div>
                         <div class="plugin-gitlab-disqus-createDate">${formatDate(comment.created_at)}</div>
-                        <div class="plugin-gitlab-disqus-commentText">${comment.body}</div>
+                        <div class="plugin-gitlab-disqus-commentText">${marked.parse(comment.body)}</div>
                     </div>
                 </div>`
                     }).join('');
