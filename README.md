@@ -20,8 +20,13 @@ yarn add honkit-plugin-gitlab-disqus
 
 Add settings to book.json
 
-url cannot be omitted.
-accessToken cannot be omitted.
+
+###support md file
+
+###support(url, accessToken)
+
+### url: gitlab issue url (url cannot be omitted.)
+### accessToken: gitlab sender accessToken (accessToken cannot be omitted.)
 
 ```json
 {
