@@ -1,17 +1,17 @@
 require(["gitbook"], function (gitbook) {
 
     gitbook.events.bind("start", function(_e, config) {
-        window.disqusConfig = config['gitlab-disqus'];
+        window.commentConfig = config['gitlab-comment'];
     });
 
     gitbook.events.bind("page.change", async function(_e, config) {
         let page = gitbook.state;
         console.log('page----', page)
-        window.disqusViewAll = false;
-        initDisqus();
+        window.commentViewAll = false;
+        initComments();
         await fetchCommentList();
         setTimeout(async () => {
-            document.getElementById('gitlab-disqus-submit').onclick = createComment;
+            document.getElementById('gitlab-comment-submit').onclick = createComment;
         }, 50);
     });
 
@@ -40,7 +40,7 @@ require(["gitbook"], function (gitbook) {
                 data = JSON.stringify(data);
             } catch (e) { }
         }
-        xhr.setRequestHeader("PRIVATE-TOKEN", window.disqusConfig.accessToken);
+        xhr.setRequestHeader("PRIVATE-TOKEN", window.commentConfig.accessToken);
         if (method == 'post') {
             xhr.setRequestHeader("Content-Type", "application/json");
         }
@@ -60,30 +60,30 @@ require(["gitbook"], function (gitbook) {
         this.quest(option, callback);
     };
 
-    const initDisqus = function() {
-        if (!window.disqusConfig?.url) {
+    const initComments = function() {
+        if (!window.commentConfig?.url) {
             throw new Error('missing gitlab url');
         }
-        if (!window.disqusConfig?.accessToken) {
+        if (!window.commentConfig?.accessToken) {
             throw new Error('missing gitlab accessToken');
         }
-        if (!!document.getElementById("gitlab-disqus-container")) return;
+        if (!!document.getElementById("gitlab-comment-container")) return;
 
-        const disqusContent = `<div id="gitlab-disqus-container" class="plugin-gitlab-disqus-container">
-                <div id="gitlab-disqus-commentTotal" class="plugin-gitlab-disqus-commentTotal"></div>
-            <div class="plugin-gitlab-disqus-commentBarWrapper">
-                <div class="plugin-gitlab-disqus-textAreaWrapper">
-                    <textarea id="gitlab-disqus-textArea" class="plugin-gitlab-disqus-textArea"></textarea>
-                    <div class="plugin-gitlab-disqus-commentBtnWrapper">
-                        <div id="gitlab-disqus-submit" class="plugin-gitlab-disqus-commentBtn">comment</div>
+        const commentContent = `<div id="gitlab-comment-container" class="plugin-gitlab-comment-container">
+                <div id="gitlab-comment-commentTotal" class="plugin-gitlab-comment-commentTotal"></div>
+            <div class="plugin-gitlab-comment-commentBarWrapper">
+                <div class="plugin-gitlab-comment-textAreaWrapper">
+                    <textarea id="gitlab-comment-textArea" class="plugin-gitlab-comment-textArea"></textarea>
+                    <div class="plugin-gitlab-comment-commentBtnWrapper">
+                        <div id="gitlab-comment-submit" class="plugin-gitlab-comment-commentBtn">comment</div>
                     </div>
                 </div>
             </div>
-            <div id="gitlab-disqus-commentListWrapper" class="plugin-gitlab-disqus-commentListWrapper"></div>
+            <div id="gitlab-comment-commentListWrapper" class="plugin-gitlab-comment-commentListWrapper"></div>
         </div>`
 
         const pageContent = document.getElementsByClassName('page-inner')[0];
-        pageContent.innerHTML = pageContent.innerHTML + disqusContent;
+        pageContent.innerHTML = pageContent.innerHTML + commentContent;
     }
 
     function formatDate(time) {
@@ -98,7 +98,7 @@ require(["gitbook"], function (gitbook) {
     }
 
     async function viewAll() {
-        window.disqusViewAll = true;
+        window.commentViewAll = true;
         await fetchCommentList();
     }
 
@@ -108,36 +108,36 @@ require(["gitbook"], function (gitbook) {
 
         try {
             //普通get请求
-            await http.get(window.disqusConfig.url, function (err, result) {
+            await http.get(window.commentConfig.url, function (err, result) {
                 if (!result || result.length == 0) return;
                 let pageInfo = gitbook.state;
                 let pageTitle = pageInfo.page.title;
                 result = result.filter(comment => !!comment.body.match(titleReg) && comment.body.match(titleReg)[1] == pageTitle);
 
                 // 这里对结果进行处理
-                document.getElementById('gitlab-disqus-commentTotal').innerText = `${result.length} Comments`;
-                if (result.length > 10 && !window.disqusViewAll) {
+                document.getElementById('gitlab-comment-commentTotal').innerText = `${result.length} Comments`;
+                if (result.length > 10 && !window.commentViewAll) {
                     let commentListInnerText = result.slice(0, 10).map(comment => {
-                        return `<div class="plugin-gitlab-disqus-commentItem">
-                    <div class="plugin-gitlab-disqus-commentContent">
-                        <div class="plugin-gitlab-disqus-createDate">${formatDate(comment.created_at)}</div>
-                        <div class="plugin-gitlab-disqus-commentText">${marked.parse(comment.body.replace(markdownReg, '').replace(' ', ''))}</div>
+                        return `<div class="plugin-gitlab-comment-commentItem">
+                    <div class="plugin-gitlab-comment-commentContent">
+                        <div class="plugin-gitlab-comment-createDate">${formatDate(comment.created_at)}</div>
+                        <div class="plugin-gitlab-comment-commentText">${marked.parse(comment.body.replace(markdownReg, '').replace(' ', ''))}</div>
                     </div>
                 </div>`
                     }).join('');
                     let viewAllInnerText = `<div class="viewAllWrapper">
-                        <div id="gitlab-disqus-view-all" class="viewAllBtn">view all</div>
+                        <div id="gitlab-comment-view-all" class="viewAllBtn">view all</div>
                     </div>`
-                    document.getElementById('gitlab-disqus-commentListWrapper').innerHTML = commentListInnerText + viewAllInnerText;
+                    document.getElementById('gitlab-comment-commentListWrapper').innerHTML = commentListInnerText + viewAllInnerText;
                     setTimeout(() => {
-                        document.getElementById('gitlab-disqus-view-all').onclick = viewAll;
+                        document.getElementById('gitlab-comment-view-all').onclick = viewAll;
                     }, 50);
                 } else {
-                    document.getElementById('gitlab-disqus-commentListWrapper').innerHTML = result.map(comment => {
-                        return `<div class="plugin-gitlab-disqus-commentItem">
-                    <div class="plugin-gitlab-disqus-commentContent">
-                        <div class="plugin-gitlab-disqus-createDate">${formatDate(comment.created_at)}</div>
-                        <div class="plugin-gitlab-disqus-commentText">${marked.parse(comment.body.replace(markdownReg, '').replace(' ', ''))}</div>
+                    document.getElementById('gitlab-comment-commentListWrapper').innerHTML = result.map(comment => {
+                        return `<div class="plugin-gitlab-comment-commentItem">
+                    <div class="plugin-gitlab-comment-commentContent">
+                        <div class="plugin-gitlab-comment-createDate">${formatDate(comment.created_at)}</div>
+                        <div class="plugin-gitlab-comment-commentText">${marked.parse(comment.body.replace(markdownReg, '').replace(' ', ''))}</div>
                     </div>
                 </div>`
                     }).join('');
@@ -152,17 +152,17 @@ require(["gitbook"], function (gitbook) {
 
     async function createComment(event) {
         event.stopPropagation();
-        let comment = document.getElementById('gitlab-disqus-textArea').value;
+        let comment = document.getElementById('gitlab-comment-textArea').value;
         if (!comment) return;
         let pageInfo = gitbook.state;
         let bodyText = `[${pageInfo.page.title}](${window.location.href}) ${comment}`;
 
         try {
             //post请求
-            await http.post({ url: window.disqusConfig.url, data: { body: bodyText}, timeout: 1000 }, async function (err, result) {
+            await http.post({ url: window.commentConfig.url, data: { body: bodyText}, timeout: 1000 }, async function (err, result) {
                 // 这里对结果进行处理
                 await fetchCommentList();
-                document.getElementById('gitlab-disqus-textArea').value = '';
+                document.getElementById('gitlab-comment-textArea').value = '';
             });
 
         } catch (error) {

@@ -1,7 +1,7 @@
 {
-  "name": "honkit-plugin-gitlab-disqus",
-  "version": "1.0.5",
-  "description": "use gitlab issues for honkit disqus component",
+  "name": "honkit-plugin-gitlab-comment",
+  "version": "1.0.3",
+  "description": "use gitlab issues for honkit comment component",
   "main": "index.js",
   "author": "day-day-sleep",
   "license": "Apache-2.0",
@@ -13,9 +13,9 @@
     "printWidth": 120,
     "semi": true
   },
-  "homepage": "https://github.com/stuyk/honkit-plugin-theme-darkening",
+  "homepage": "https://github.com/day-day-sleep/honkit-plugin-gitlab-comment",
   "keywords": [
-    "disqus",
+    "comment",
     "gitlab",
     "issues",
     "honkit",
@@ -23,9 +23,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/day-day-sleep/honkit-plugin-gitlab-disqus"
+    "url": "https://github.com/day-day-sleep/honkit-plugin-gitlab-comment"
   },
   "bugs": {
-    "url": "https://github.com/day-day-sleep/honkit-plugin-gitlab-disqus/issues"
+    "url": "https://github.com/day-day-sleep/honkit-plugin-gitlab-comment/issues"
   }
 }

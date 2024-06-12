@@ -1,19 +1,19 @@
 # Introduction
 
-# honkit-plugin-gitlab-disqus
+# honkit-plugin-gitlab-comment
 
-use gitlab issue for honkit bolg disqus
+use gitlab issue for honkit bolg comment
 
 ## How to install
 
 ```sh
-npm install honkit-plugin-gitlab-disqus
+npm install honkit-plugin-gitlab-comment
 ```
 
 or
 
 ```sh
-yarn add honkit-plugin-gitlab-disqus
+yarn add honkit-plugin-gitlab-comment
 ```
 
 ## How to usage
@@ -30,9 +30,9 @@ Add settings to book.json
 
 ```json
 {
-  "plugins": ["gitlab-disqus"],
+  "plugins": ["gitlab-comment"],
   "pluginsConfig": {
-    "gitlab-disqus": {
+    "gitlab-comment": {
       "url": "https://gitlab.com/api/v4/projects/{projectId}/issues/{issueId}/notes",
       "accessToken": "gitlab user access token"
     }
