@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26f0f72e-2fe8-4183-835a-504cc9de198b" name="Default Changelist" comment="feat page filter comment show and send comment with markdown url">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="26f0f72e-2fe8-4183-835a-504cc9de198b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +16,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../honkit-plugin-gitlab-comment" />
   </component>
   <component name="ProjectId" id="2h8Fw1oXSwu0y9IN3tfRShW4sB3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -56,7 +50,7 @@
       <workItem from="1716968040325" duration="10505000" />
       <workItem from="1717036993006" duration="26925000" />
       <workItem from="1717466678370" duration="2435000" />
-      <workItem from="1717473336436" duration="8806000" />
+      <workItem from="1717473336436" duration="9613000" />
     </task>
     <task id="LOCAL-00001" summary="disqus plugin init">
       <created>1717037380267</created>
@@ -114,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718187307678</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix">
+      <created>1718188530763</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718188530764</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,10 +124,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="disqus plugin init" />
     <MESSAGE value="feat honkit gitlab plugin" />
-    <MESSAGE value="fix" />
     <MESSAGE value="feat view all" />
     <MESSAGE value="feat support md file" />
     <MESSAGE value="feat page filter comment show and send comment with markdown url" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat page filter comment show and send comment with markdown url" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

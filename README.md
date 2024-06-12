@@ -21,9 +21,9 @@ yarn add honkit-plugin-gitlab-comment
 Add settings to book.json
 
 
-###support md file
+support md file
 
-###support(url, accessToken)
+support(url, accessToken)
 
 ### url: gitlab issue url (url cannot be omitted.)
 ### accessToken: gitlab sender accessToken (accessToken cannot be omitted.)
