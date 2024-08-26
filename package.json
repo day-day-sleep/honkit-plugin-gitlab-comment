@@ -1,6 +1,6 @@
 {
   "name": "honkit-plugin-gitlab-comment",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "use gitlab issues for honkit comment component",
   "main": "index.js",
   "author": "day-day-sleep",
