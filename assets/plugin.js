@@ -83,7 +83,7 @@ require(["gitbook"], function (gitbook) {
         </div>`
 
         const pageContent = document.getElementsByClassName('page-inner')[0];
-        pageContent.innerHTML = pageContent.innerHTML + commentContent;
+        pageContent.insertAdjacentHTML('beforeend' ,commentContent);
     }
 
     function formatDate(time) {
